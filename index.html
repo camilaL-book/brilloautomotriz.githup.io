@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brillo Automotriz | Lavado Profesional de Autos</title>
+    <meta name="description" content="Servicio profesional de lavado y detailing de autos en Brillo Automotriz. Deja tu vehículo como nuevo con nuestros servicios premium.">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('http://static.photos/automotive/1200x630/1') no-repeat center center;
+            background-size: cover;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .before-after {
+            position: relative;
+            overflow: hidden;
+        }
+        .before-after img {
+            transition: all 0.5s ease;
+        }
+        .before-after:hover img {
+            transform: scale(1.05);
+        }
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <i data-feather="droplet" class="text-blue-600 w-8 h-8"></i>
+                <span class="ml-2 text-2xl font-bold text-blue-600">Brillo Automotriz</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-gray-700 hover:text-blue-600 font-medium">Inicio</a>
+                <a href="#servicios" class="text-gray-700 hover:text-blue-600 font-medium">Servicios</a>
+                <a href="#proceso" class="text-gray-700 hover:text-blue-600 font-medium">Proceso</a>
+                <a href="#galeria" class="text-gray-700 hover:text-blue-600 font-medium">Galería</a>
+                <a href="#productos" class="text-gray-700 hover:text-blue-600 font-medium">Productos</a>
+                <a href="#contacto" class="text-gray-700 hover:text-blue-600 font-medium">Contacto</a>
+            </nav>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i data-feather="menu" class="w-6 h-6 text-gray-700"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full py-2 px-4 shadow-lg" id="mobile-menu">
+            <a href="#inicio" class="block py-2 text-gray-700 hover:text-blue-600">Inicio</a>
+            <a href="#servicios" class="block py-2 text-gray-700 hover:text-blue-600">Servicios</a>
+            <a href="#proceso" class="block py-2 text-gray-700 hover:text-blue-600">Proceso</a>
+            <a href="#galeria" class="block py-2 text-gray-700 hover:text-blue-600">Galería</a>
+            <a href="#productos" class="block py-2 text-gray-700 hover:text-blue-600">Productos</a>
+            <a href="#contacto" class="block py-2 text-gray-700 hover:text-blue-600">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-4 text-white">
+            <div class="max-w-2xl" data-aos="fade-right">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Brillo Automotriz</h1>
+                <p class="text-xl mb-8">Deja tu vehículo impecable con nuestros servicios premium de lavado y detailing profesional.</p>
+                <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg inline-flex items-center transition duration-300">
+                    Contáctanos
+                    <i data-feather="message-circle" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nuestros Servicios</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ofrecemos una variedad de servicios para mantener tu auto en perfecto estado.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-50 rounded-xl p-6 shadow-md transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="star" class="text-blue-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Lavado Premium</h3>
+                    <p class="text-gray-600 mb-4">Limpieza completa interior y exterior: tablero, puertas, motor, chasis, techo, alfombras y asientos.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-600 font-bold text-xl">450 Bs</span>
+                        <a href="#contacto" class="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+                            Contactar
+                            <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-50 rounded-xl p-6 shadow-md transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="shield" class="text-blue-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Detailing Completo</h3>
+                    <p class="text-gray-600 mb-4">Limpieza completa interior y exterior: tablero, puertas, motor, chasis, techo, alfombras y asientos. Incluye pulido, encerado, eliminación de lluvia ácida y tratamiento cerámico para máxima protección.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-600 font-bold text-xl">1000 Bs</span>
+                        <a href="#contacto" class="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+                            Contactar
+                            <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Process Section -->
+    <section id="proceso" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nuestro Proceso</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Mira cómo transformamos autos sucios en obras de arte con nuestro proceso profesional.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Video 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-96" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Lavado Completo</h3>
+                        <p class="text-gray-600">Mira nuestro proceso completo de lavado desde el prelavado hasta el secado final.</p>
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-96" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Detailing Profesional</h3>
+                        <p class="text-gray-600">Conoce las técnicas que usamos para dejar tu auto como nuevo con nuestro detailing profesional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productos" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nuestros Productos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ofrecemos los mejores productos para el cuidado de tu vehículo.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                
+                <!-- Product 4 -->
+                <div class="bg-white rounded-xl p-6 shadow-md transition duration-300 hover:shadow-lg" data-aos="fade-up">
+                    <img src="http://static.photos/automotive/640x360/23" alt="Protector de plásticos" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Protector de Plásticos</h3>
+                    <p class="text-gray-600 mb-4">Silicona Revive y protege los plásticos exteriores de tu vehículo.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-600 font-bold text-xl">150Bs</span>
+                       
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="bg-white rounded-xl p-6 shadow-md transition duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/automotive/640x360/24" alt="Limpiador de interiores" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Desengrasante</h3>
+                    <p class="text-gray-600 mb-4">Elimina manchas y olores de tapicerías y plásticos interiores.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-600 font-bold text-xl">150Bs</span>
+                        
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="bg-white rounded-xl p-6 shadow-md transition duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/automotive/640x360/25" alt="Kit de limpieza" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Quita Sarro</h3>
+                    <p class="text-gray-600 mb-4">Ayuda a eliminar el sarro y grasa acumulada por el tiempo</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-600 font-bold text-xl">150Bs</span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nuestro Trabajo</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Transformamos autos sucios en obras de arte. Mira la diferencia.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Before/After 1 -->
+                <div class="before-after rounded-xl overflow-hidden shadow-md" data-aos="zoom-in">
+                    <div class="relative">
+                        <img src="http://static.photos/automotive/640x360/10" alt="Auto antes del lavado" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-blue-600 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <span class="text-white font-bold text-xl">Antes</span>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="http://static.photos/automotive/640x360/11" alt="Auto después del lavado" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-green-500 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <span class="text-white font-bold text-xl">Después</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Before/After 2 -->
+                <div class="before-after rounded-xl overflow-hidden shadow-md" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="relative">
+                        <img src="http://static.photos/automotive/640x360/12" alt="Auto antes del lavado" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-blue-600 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <span class="text-white font-bold text-xl">Antes</span>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="http://static.photos/automotive/640x360/13" alt="Auto después del lavado" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-green-500 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <span class="text-white font-bold text-xl">Después</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Before/After 3 -->
+                <div class="before-after rounded-xl overflow-hidden shadow-md" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="http://static.photos/automotive/640x360/14" alt="Auto antes del lavado" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-blue-600 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <span class="text-white font-bold text-xl">Antes</span>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="http://static.photos/automotive/640x360/15" alt="Auto después del lavado" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-green-500 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <span class="text-white font-bold text-xl">Después</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonials -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-8">Lo que dicen nuestros clientes</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card bg-white rounded-xl p-6 shadow-md" data-aos="fade-up">
+                        <div class="flex items-center mb-4">
+                            <img src="http://static.photos/people/100x100/1" alt="Cliente" class="w-12 h-12 rounded-full object-cover">
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-800">Juan Pérez</h4>
+                                <div class="flex text-yellow-400">
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Increíble servicio. Mi auto nunca había lucido tan bien. El detailing completo valió cada peso."</p>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card bg-white rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center mb-4">
+                            <img src="http://static.photos/people/100x100/2" alt="Cliente" class="w-12 h-12 rounded-full object-cover">
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-800">María González</h4>
+                                <div class="flex text-yellow-400">
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"El mejor lavado de autos que he probado. Reservé online y todo fue perfecto. Volveré seguro."</p>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card bg-white rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center mb-4">
+                            <img src="http://static.photos/people/100x100/3" alt="Cliente" class="w-12 h-12 rounded-full object-cover">
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-800">Carlos Rojas</h4>
+                                <div class="flex text-yellow-400">
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Profesionales y detallistas. Mi auto de 10 años parece nuevo. Recomiendo el paquete completo."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contáctanos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Estamos aquí para responder cualquier pregunta que tengas sobre nuestros servicios.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Contact Info -->
+                <div class="bg-white rounded-xl shadow-md p-8" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Información de Contacto</h3>
+                    
+                    <div class="flex items-start mb-6">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="map-pin" class="text-blue-600 w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">Dirección</h4>
+                            <p class="text-gray-600">Av. Marcerlo Quiroga Sta. Cruz, Bolivia-La Paz</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start mb-6">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="mail" class="text-blue-600 w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">Correo Electrónico</h4>
+                            <p class="text-gray-600">brillo-automotriz@hotmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start mb-6">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="phone" class="text-blue-600 w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">Teléfono</h4>
+                            <p class="text-gray-600">+591 78732821</p>
+                            <p class="text-gray-600">+591 73284285</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="clock" class="text-blue-600 w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">Horario de Atención</h4>
+                            <p class="text-gray-600">Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                            <p class="text-gray-600">Sábado: 7:30 AM - 12:30 PM</p>
+                            <p class="text-gray-600">Domingo: Cerrado</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-gray-800 mb-4">Síguenos en Redes Sociales</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition duration-300">
+                                <i data-feather="facebook" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition duration-300">
+                                <i data-feather="instagram" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition duration-300">
+                                <i data-feather="twitter" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl shadow-md p-8" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Envía un Mensaje</h3>
+                    <form id="contact-form">
+                        <div class="mb-4">
+                            <label for="contact-name" class="block text-gray-700 font-medium mb-2">Nombre Completo</label>
+                            <input type="text" id="contact-name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="contact-email" class="block text-gray-700 font-medium mb-2">Correo Electrónico (Opcional)</label>
+                            <input type="email" id="contact-email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="contact-phone" class="block text-gray-700 font-medium mb-2">Teléfono </label>
+                            <input type="tel" id="contact-phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+                        <div class="mb-4">
+                            <label for="contact-subject" class="block text-gray-700 font-medium mb-2">Asunto</label>
+                            <input type="text" id="contact-subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="contact-message" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                            <textarea id="contact-message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Map -->
+            <div class="mt-16 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d876.9006257864027!2d-68.14559211562697!3d-16.52268585622394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sbo!4v1757036159418!5m2!1ses-419!2sbo" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="flex items-center mb-4">
+                        <i data-feather="droplet" class="text-blue-400 w-8 h-8"></i>
+                        <span class="ml-2 text-2xl font-bold text-blue-400">Brillo Automotriz</span>
+                    </a>
+                    <p class="text-gray-400">Servicio profesional de lavado y detailing de autos en Brillo Automotriz. Deja tu vehículo como nuevo con nuestros servicios premium.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#servicios" class="text-gray-400 hover:text-blue-400 transition duration-300">Lavado Premium</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-blue-400 transition duration-300">Detailing Completo</a></li>
+                        <li><a href="#productos" class="text-gray-400 hover:text-blue-400 transition duration-300">Productos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-blue-400 transition duration-300">Inicio</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-blue-400 transition duration-300">Servicios</a></li>
+                        <li><a href="#proceso" class="text-gray-400 hover:text-blue-400 transition duration-300">Proceso</a></li>
+                        <li><a href="#galeria" class="text-gray-400 hover:text-blue-400 transition duration-300">Galería</a></li>
+                        <li><a href="#productos" class="text-gray-400 hover:text-blue-400 transition duration-300">Productos</a></li>
+                        <li><a href="#contacto" class="text-gray-400 hover:text-blue-400 transition duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Horario</h4>
+                    <p class="text-gray-400 mb-2">Lunes a Viernes:</p>
+                    <p class="text-gray-400">8:00 AM - 6:00 PM</p>
+                    <p class="text-gray-400 mb-2">Sábado:</p>
+                    <p class="text-gray-400 mb-4">7:30 AM - 12:30 PM</p>
+                    <p class="text-gray-400 mb-2">Domingo:</p>
+                    <p class="text-gray-400">Cerrado</p>
+                    
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                            <i data-feather="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                            <i data-feather="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                            <i data-feather="twitter" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Brillo Automotriz. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');
+            this.reset();
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
+</body>
+</html>
